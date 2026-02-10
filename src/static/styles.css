@@ -39,7 +39,20 @@ main {
   main {
     grid-template-columns: 2fr 1fr;
   }
-}
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  @media (min-width: 768px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 section {
   background-color: white;
@@ -48,6 +61,33 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.activity-card {
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 350px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f9f9f9 80%, #e3eafc 100%);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform 0.15s;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(26, 35, 126, 0.13);
+}
 }
 
 section h3 {
@@ -79,6 +119,19 @@ section h3 {
   margin-top: 15px;
   padding-top: 12px;
   border-top: 1px dashed #ccc;
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.register-email {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 15px;
+}
 }
 
 .participants-section h5 {
